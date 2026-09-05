@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --configLoader runner --host 127.0.0.1",
-    "build": "node scripts/hydrate-source.mjs && tsc -b && vite build --configLoader runner",
+    "build": "node hydrate-source.mjs && tsc -b && vite build --configLoader runner",
     "preview": "vite preview --configLoader runner --host 127.0.0.1",
     "api": "node backend/server.mjs"
   },
