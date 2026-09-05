@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: rebuild-loop
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run api
+    envVars:
+      - key: NODE_VERSION
+        value: 20
